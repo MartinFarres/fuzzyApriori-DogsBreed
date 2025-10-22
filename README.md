@@ -1,11 +1,10 @@
-
 # Fuzzy Apriori Analysis on Dog Breed Traits
 
 This project applies the **Fuzzy-Apriori** algorithm to a dataset of dog breed characteristics to discover non-obvious association rules and patterns between traits.
 
 The core of the analysis is in the `fuzzyApriori_DogsBreed.ipynb` notebook. The data is sourced from `breed_traits.csv`.
 
-## 🎯 Project Goal
+## Project Goal
 
 The goal is to find interesting, predictive rules from a dataset of dog breed ratings. For example, can we find a strong rule like:
 
@@ -13,7 +12,7 @@ The goal is to find interesting, predictive rules from a dataset of dog breed ra
 
 Standard Apriori cannot be used because our data consists of quantitative ratings (1-5), not simple binary (yes/no) transactions.
 
-## 💡 The Fuzzy-Apriori Approach
+## The Fuzzy-Apriori Approach
 
 We solve this problem by using **Fuzzy Logic** to convert our quantitative ratings into qualitative, overlapping sets, allowing us to find more nuanced patterns.
 
@@ -33,7 +32,7 @@ With our "fuzzy transactions" ready, we run the core algorithm to find **frequen
 
 From our list of frequent itemsets, we generate association rules. We test the strength of each rule by calculating its **Fuzzy Confidence** and **Lift**. These rules are then filtered by a `min_confidence` threshold to find only the most reliable patterns.
 
-## 📊 Key Results & Visualizations
+## Key Results & Visualizations
 
 The analysis produced several key visualizations to interpret the patterns.
 
@@ -57,7 +56,7 @@ This graph visualizes the **Top 10 most interesting rules (by Lift)**.
   * **Arrow Thickness**: Represents the `Lift` of the rule (thicker = more interesting).
   * **Node Size**: Represents the `Support` of the trait (bigger = more common).
 
-## 🚀 How to Use
+## How to Use
 
 1.  **Data:** The `breed_traits.csv` file contains the raw data.
 2.  **Notebook:** The entire step-by-step analysis is in `fuzzyApriori_DogsBreed.ipynb`.
